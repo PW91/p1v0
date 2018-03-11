@@ -1,19 +1,26 @@
 .pivo {
     position: relative;
 
-    &__img-container {
+    &__logo {
         position: absolute;
-        background-image: url('../images/layer.png');
+        z-index: 2;
+        width: 200vw;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 0.7;
+    }
+
+    /*&__img-container {
+        position: absolute;
+        background-color: orange;
         z-index: 3;
         top: 0;
         left: 0;
         opacity: 0.7;
         width: 100%;
         height: 100vh;
-        background-position: center;
-        background-position: cover;
-        background-repeat: no-repeat;
-    }
+    }*/
 
     &__video-container {
         position: relative;
@@ -50,6 +57,25 @@
         img {
             width: 250px;
             margin: 10px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .pivo {
+
+        &__logo {
+            top: 40vh;
+            width: 150vh;
+            height: 150vh;
+        }
+        &__buttons-container {
+            display: block;
+            text-align: center;
+
+            img {
+                width: 200px;
+            }
         }
     }
 }
